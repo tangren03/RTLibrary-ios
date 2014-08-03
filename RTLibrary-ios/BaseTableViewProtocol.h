@@ -52,7 +52,7 @@
  *  @param entity Cell对应的实体
  *  @param indexPath
  */
-typedef void (^TableViewCellConfigurate)(UITableViewCell *cell, id entity, NSIndexPath *indexPath);
+typedef void (^TableViewCellConfigurate)(id cell, id entity, NSIndexPath *indexPath);
 
 /**
  *  配置不同section中的cell的行数(rows)

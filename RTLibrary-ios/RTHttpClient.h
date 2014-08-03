@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 
+//HTTP REQUEST METHOD TYPE
+typedef NS_ENUM(NSInteger, RTHttpRequestType) {
+    RTHttpRequestGet,
+    RTHttpRequestPost,
+    RTHttpRequestDelete,
+    RTHttpRequestPut,
+};
+
 /**
  *  请求开始前预处理Block
  */

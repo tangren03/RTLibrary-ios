@@ -7,16 +7,8 @@
 //
 
 #import "RTHttpClient.h"
-#import "Reachability.h"
+#import "Reachability.h"//pod 'Reachability', '~> 3.1.1'
 #import "RTJSONResponseSerializerWithData.h"
-
-//HTTP REQUEST METHOD TYPE
-typedef NS_ENUM(NSInteger, RTHttpRequestType) {
-    RTHttpRequestGet,
-    RTHttpRequestPost,
-    RTHttpRequestDelete,
-    RTHttpRequestPut,
-};
 
 @interface RTHttpClient()
 @property(nonatomic,strong) AFHTTPSessionManager *manager;
@@ -75,6 +67,7 @@ typedef NS_ENUM(NSInteger, RTHttpRequestType) {
             {
                 [self.manager DELETE:url parameters:parameters success:success failure:failure];
             }
+                break;
             case RTHttpRequestPut:
             {
                 [self.manager PUT:url parameters:parameters success:success failure:false];

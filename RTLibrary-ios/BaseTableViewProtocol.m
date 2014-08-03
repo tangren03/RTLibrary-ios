@@ -60,7 +60,7 @@ numberOfRowsInSectionConfigureBlock:nil
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (self.delegate) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(selectRowAtIndexPath:)]) {
         [self.delegate selectRowAtIndexPath:indexPath];
     }
 }

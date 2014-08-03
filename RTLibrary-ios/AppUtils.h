@@ -46,4 +46,8 @@
 //根据颜色码取得颜色对象
 + (UIColor *)colorWithHexString:(NSString *)stringToConvert;
 
+/********************* Verification Utils **********************/
+//验证手机号码合法性（正则）
++ (BOOL)checkPhoneNumber:(NSString *)phoneNumber;
+
 @end
